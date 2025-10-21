@@ -331,26 +331,27 @@ footer h3 {
   font-weight: 500;
   margin-top: 0; /* remove espaço extra acima do h3 */
 }
-/* === SEÇÃO CONTATO === */
+/* === SEÇÃO CONTATO (FORM + MAPA) === */
 .main_contato {
-  background-color: var(--highlight); /* azul clarinho */
-  padding: 4rem 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
+  flex-wrap: wrap; /* responsivo */
+  background-color: var(--highlight);
+  padding: 4rem 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 800px;
+  max-width: 1200px;
   margin: 2rem auto;
 }
 
-/* Formulário */
+/* === FORMULÁRIO === */
 .main_contato form {
+  flex: 1; /* ocupa metade */
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 1.5rem;
 }
 
@@ -364,8 +365,8 @@ footer h3 {
   background-color: #fff;
   font-size: 1rem;
   color: var(--text);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .main_contato form input:focus,
@@ -375,7 +376,6 @@ footer h3 {
   outline: none;
 }
 
-/* Textarea específico */
 .main_contato form textarea {
   resize: vertical;
   min-height: 120px;
@@ -394,79 +394,69 @@ footer h3 {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover do botão */
 .main_contato form button:hover {
   background-color: var(--secondary);
   transform: translateY(-2px);
 }
 
-/* Span de feedback */
+/* Span */
 .main_contato form span {
   font-size: 0.9rem;
   color: var(--accent);
-  margin-top: -0.5rem; /* se for mensagem de erro ou sucesso */
 }
 
-/* === SEÇÃO MAPA === */
+/* === MAPA === */
 .article_mapa {
+  flex: 1;
+  min-width: 300px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem; /* espaço entre formulário e mapa */
-  flex-wrap: wrap; /* responsivo: quebra em coluna em telas pequenas */
-  background-color: var(--highlight);
-  padding: 4rem 2rem;
-  border-radius: 12px;
-  max-width: 1200px;
-  margin: 2rem auto;
+  flex-direction: column;
+  gap: 1.5rem;
+  
 }
 
-/* === ENDEREÇO === */
 .article_mapa address {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  font-style: normal; /* remove itálico padrão */
+  gap: 0.5rem;
+  font-style: normal;
   color: var(--text);
-  max-width: 400px;
 }
 
-/* Parágrafos dentro do address */
-.article_mapa address p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* === MAPA (iframe) === */
 .article_mapa iframe {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 350px;
-  border: 2px solid var(--secondary);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+  border: 2px solid var(--secondary); /* mesma cor da borda dos inputs */
+  border-radius: 8px; /* mesmo arredondamento */
+  background-color: #fff; /* fundo branco igual aos campos */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra leve igual aos inputs */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+/* Efeito ao passar o mouse */
 .article_mapa iframe:hover {
+  border-color: var(--primary); /* azul mais escuro */
+  box-shadow: 0 0 5px var(--primary);
   transform: scale(1.02);
 }
 
+
 /* === RESPONSIVIDADE === */
 @media (max-width: 992px) {
-  .article_mapa {
-    flex-direction: column; /* quebra o layout lado a lado */
+  .main_contato {
+    flex-direction: column; /* quebra o layout */
     align-items: center;
   }
 
   .article_mapa iframe {
     width: 100%;
-    max-width: 500px;
     height: 300px;
   }
 
   .article_mapa address {
-    max-width: 100%;
     text-align: center;
   }
 }
+
 
