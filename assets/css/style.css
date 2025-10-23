@@ -459,4 +459,65 @@ footer h3 {
   }
 }
 
+/* === FORMULÁRIO: FEEDBACK VISUAL === */
+form input,
+form textarea {
+  border: 2px solid var(--secondary);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Campo com erro */
+form input.erro,
+form textarea.erro {
+  border-color: #dc2626; /* vermelho */
+  box-shadow: 0 0 6px rgba(220, 38, 38, 0.4);
+}
+
+/* Campo válido */
+form input.valido,
+form textarea.valido {
+  border-color: #16a34a; /* verde */
+  box-shadow: 0 0 6px rgba(22, 163, 74, 0.4);
+}
+
+/* Mensagem de erro */
+form span.erro {
+    display: block;
+    color: #dc2626;
+    font-size: 0.875rem; /* reduzido para 14px */
+    margin-top: 0.125rem; /* reduzido para 2px */
+    margin-bottom: 0.125rem; /* reduzido para 2px */
+    padding-left: 0.5rem; /* adiciona um pequeno recuo */
+    opacity: 0;
+    transform: translateY(-2px); /* reduzido para movimento mais sutil */
+    transition: all 0.2s ease;
+    line-height: 1.2; /* altura da linha mais compacta */
+}
+
+/* Quando ativa */
+form span.erro.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === MENSAGEM DE SUCESSO === */
+.mensagem-sucesso {
+  display: block;
+  text-align: center;
+  color: #16a34a; /* verde suave */
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Quando ativa */
+.mensagem-sucesso.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 

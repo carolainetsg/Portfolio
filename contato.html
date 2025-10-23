@@ -32,19 +32,15 @@
 
      </header>
 
-     <!--Seção Principal da Página (main)-->
-     <main>
-
-
         <!--Seção Principal da Página (main)-->
      <main class="main_contato">
 
         <!--Seção do Formulário-->
-        <form action="#" method="submit" id="formulario">
+        <form id="formulario">
 
-            <label for="nome">Nome: </label>
+            <label for="name">Nome: </label>
             <input id="name" type="text" name="name" placeholder="Digite seu nome " />
-            <span id="errNome"></span>
+            <span id="errName"></span>
 
             <label for="email">Email: </label>
             <input id="email" type="text" name="email" placeholder="Digite seu email" />
@@ -57,6 +53,7 @@
             <label for="message">Mensagem: </label>
             <textarea id="message" name="message" placeholder="Digite sua mensagem"> </textarea>
 
+            <span id="msgSucesso" class="mensagem-sucesso"></span>
             <button type="submit">Enviar</button>
 
         </form>
@@ -72,8 +69,6 @@
 
 
         </article>
-
-     </main>
 
      </main>
 
@@ -100,6 +95,9 @@
         </h3>
 
      </footer>
+
+     <!-- Script JavaScript-->
+      <script src="./assets/js/script.js"></script>
 
 </body>
 </html>
