@@ -169,17 +169,17 @@ section p {
 }
 
 /* === IMAGEM === */
-#about img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
+main img {
+  width: 100%;
+  height: clamp(220px, 40vw); /* tamanho responsivo */
+  border-radius: 0%;
   object-fit: cover;
   border: 4px solid var(--secondary);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
-#about img:hover {
+#main img:hover {
   transform: scale(1.05);
 }
 
@@ -241,7 +241,7 @@ section p {
   font-size: 2rem;
   color: var(--primary);
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ARTICLE para centralizar o vídeo */
