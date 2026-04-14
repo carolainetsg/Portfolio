@@ -12,7 +12,7 @@ Estrutura das Páginas
     - Formação na UNIPAMPA, atividades acadêmicas (empresa júnior, iniciação científica), empreendedorismo (Doceria Ca-Ana) e estágio na CAAL (análises físico-químicas/UTEs).
     - Atuação na Yara Brasil Fertilizantes (análises físico-químicas, gestão de equipamentos, suporte via SAP, melhoria contínua).
     - Início de formação em Desenvolvimento Full Stack JavaScript com práticas em SQL/MySQL, Node.js, Nest.js, TypeScript, React, HTML, CSS e Tailwind.
-    - Ênfase nas áreas alvo: Analista de Laboratório Químico, Qualidade e Dados Júnior (termos destacados em negrito no texto).
+    - Ênfase nas áreas alvo: Analista de Produção, Qualidade, Operações, Pesquisadora ou Técnica Química (termos destacados em negrito no texto).
   - Seção “Vídeo”: dois embeds do YouTube com instituições/pilares da formação.
   - Footer com links (LinkedIn, GitHub, Instagram) e assinatura.
 
